@@ -33,4 +33,34 @@ class UnitTestForSwiftTests: XCTestCase {
         }
     }
     
+    func testActionIntMethod() {
+        let i = FirstViewController().actionInt()
+        XCTAssertEqual(i, 11)
+        XCTAssert(i == 11, "the int number is 11")
+
+    }
+    func testActionStringMethod() {
+        let str = FirstViewController().actionString()
+        XCTAssertEqual(str, "hello")
+        XCTAssert(str == "hello", "the string is hello")
+
+    }
+    
+    func testActionBoolMethod() {
+        
+        let bol = FirstViewController().actionBool()
+        XCTAssertTrue(bol)
+    }
+    
+    func testFirstViewControllerInit() {
+        
+        let vc = FirstViewController()
+        XCTAssertNotNil(vc)
+    }
+    func testFirstViewControllerObjectInit() {
+        
+        let nilObject = FirstViewController().nilObject
+        XCTAssertNil(nilObject)
+    }
+    
 }
